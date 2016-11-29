@@ -1,0 +1,9 @@
+/* Effective stylesheet produced by snapshot save */
+.ucsl-dialog { z-index: 1000; width: 540px; left: -3000px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; position: absolute; top: 110px; border-radius: 6px; }
+.ucsl-dialog-title { border-bottom: 1px solid rgb(206, 206, 206); height: 30px; line-height: 30px; padding: 6px 6px 6px 16px; }
+.ucsl-dialog-title-word { float: left; font: 16px "Microsoft YaHei","Simsun"; }
+.ucsl-dialog-title-close { float: right; width: 21px; height: 21px; background: rgb(255, 255, 255) url("urn:not-loaded:http://cas.baidu.com/img/close.png") no-repeat scroll 0% 0%; cursor: pointer; margin-right: 4px; }
+.ucsl-dialog-content { margin: 10px; text-align: center; }
+.ucsl-dialog-content div { font-size: 14px; margin: 30px; }
+.ucsl-dialog-content div.orange { color: rgb(254, 126, 1); font-weight: 700; }
+.ucsl-layerMask { z-index: 999; position: absolute; top: 0px; left: 0px; background-color: silver; opacity: 0.25; }

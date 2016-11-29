@@ -1,0 +1,142 @@
+/* Effective stylesheet produced by snapshot save */
+h3, h4, p { margin: 0px; padding: 0px; }
+#section-0 { background: rgb(63, 176, 238) url("bg-0_c25cb21.jpg") repeat scroll center top; }
+#section-1 { background: rgb(13, 113, 205) url("bg-1_e29bcfa.jpg") repeat scroll center -126px; }
+#section-2 { background: rgb(73, 193, 121) url("bg-2_867b7b4.jpg") repeat scroll center top; }
+#section-3 { background: rgb(0, 154, 112) url("bg-3_153a003.jpg") repeat scroll center top; }
+.section .center { width: 1000px; margin: 0px auto; position: relative; }
+.section .bottom { position: absolute; width: 100%; left: 0px; bottom: 0px; }
+.section .top { position: absolute; width: 100%; left: 0px; top: 0px; }
+.section .middle { position: absolute; width: 100%; left: 0px; top: 50%; }
+.section { position: relative; }
+.section .title { position: absolute; left: 0px; top: 0px; font-family: "Microsoft Yahei"; color: rgb(255, 255, 255); width: 500px; }
+.section .title h3 { width: 66px; height: 126px; text-indent: -9999em; float: left; }
+.section .title .text { margin-left: 86px; margin-top: 8px; }
+.section .title .text h4 { font-size: 34px; font-weight: 400; letter-spacing: 2px; line-height: 48px; margin-bottom: 6px; }
+.section .title .text p { font-size: 19px; letter-spacing: 1px; line-height: 32px; opacity: 0.8; }
+#section-1 .title h3 { background: transparent url("h_lingxian_221f2d8.png") no-repeat scroll 0% 0%; }
+#section-2 .title h3 { background: transparent url("h_quanmian_8f813d2.png") no-repeat scroll 0% 0%; }
+#section-3 .title h3 { background: transparent url("h_zhuanye_256a94d.png") no-repeat scroll 0% 0%; }
+.title-area { position: absolute; opacity: 0; }
+.title-area-1 { top: -100px; left: -30px; }
+.title-area-2 { top: -121px; left: 8px; }
+.title-area-3 { top: -140px; left: 32px; }
+.title-area-3 .obj-bubble { left: -36px; top: -56px; width: 275px; height: 245px; background: transparent url("bubble_3b0f897.png") repeat scroll 0% 0%; }
+.section .follow-head { position: absolute; bottom: 0px; left: 0px; width: 100%; }
+#section-0 .follow-head { height: 126px; background: rgb(13, 113, 205) url("bg-1_e29bcfa.jpg") repeat scroll 0% 0%; }
+#section-2 .follow-head { height: 138px; background: transparent url("bg-3-head_b8a3f7f.png") repeat scroll 0% 0%; }
+.obj { visibility: hidden; }
+.obj, .title-area { position: absolute; transition: all 0.5s ease-out 0.3s; }
+.obj-launch { width: 501px; height: 158px; background: transparent url("launch_deea86c.png") repeat scroll 0% 0%; left: 0px; top: -210px; }
+.obj-ship { width: 242px; height: 228px; background: transparent url("ship_1ad6734.png") repeat scroll 0% 0%; left: 100px; top: -191px; }
+.active .obj-ship { left: 126px; }
+@keyframes flight {
+  0% { top: -220px; }
+  40% { top: -230px; }
+  100% { top: -220px; }
+}
+@keyframes flight {
+  0% { top: -220px; }
+  40% { top: -230px; }
+  100% { top: -220px; }
+}
+@keyframes flight {
+  0% { top: -220px; }
+  40% { top: -230px; }
+  100% { top: -220px; }
+}
+.obj-flight { width: 119px; height: 78px; background: transparent url("flight_ade8ee2.png") repeat scroll 0% 0%; left: 295px; top: -236px; }
+.active .obj-flight { animation: 3s ease 0s normal none infinite running flight; }
+.obj-hill-1 { width: 265px; height: 175px; background: transparent url("hill_1_0d79217.png") repeat scroll 0% 0%; left: -182px; top: -50px; }
+.obj-hill-2 { width: 63px; height: 78px; background: transparent url("hill_2_540422f.png") repeat scroll 0% 0%; right: 288px; top: -13px; }
+.obj-hill-3 { width: 260px; height: 175px; background: transparent url("hill_3_ace39fb.png") repeat scroll 0% 0%; right: -129px; top: -47px; }
+.obj-brain { width: 444px; height: 427px; background: transparent url("brain_36a156f.png") repeat scroll 0% 0%; right: -14px; top: -200px; opacity: 0; }
+.obj-allside { width: 444px; height: 330px; background: transparent url("allside_e8abd12.png") repeat scroll 0% 0%; right: 2px; top: -120px; opacity: 0; }
+.obj-stat { width: 603px; height: 361px; background: transparent url("stat_8934528.png") repeat scroll 0% 0%; right: 50px; top: -160px; opacity: 0; }
+.login-area { height: 300px; width: 340px; border-radius: 5px; background: rgb(78, 191, 252) none repeat scroll 0% 0%; position: absolute; right: 0px; top: -198px; }
+.btn-arrow { display: block; width: 30px; height: 26px; background: transparent url("arrow_aad9b25.png") repeat scroll 0% 0%; position: absolute; left: 485px; bottom: 42px; }
+.copyright { font-size: 12px; color: rgb(255, 255, 255); text-align: center; line-height: 80px; font-family: "Microsoft Yahei"; }
+.copyright a { color: rgb(255, 255, 255); text-decoration: none; }
+.copyright a:hover { text-decoration: underline; }
+.section .square { position: absolute; display: block; width: 88px; height: 88px; }
+#section-1 .square { bottom: 0px; }
+#section-1 .square-1 { background: rgb(53, 181, 104) none repeat scroll 0% 0%; left: 70px; width: 44px; height: 44px; }
+#section-1 .square-2 { background: rgb(74, 193, 121) none repeat scroll 0% 0%; left: 158px; }
+#section-1 .square-3 { background: rgb(138, 231, 90) none repeat scroll 0% 0%; left: 246px; width: 44px; height: 44px; }
+#section-1 .square-4 { background: rgb(138, 231, 90) none repeat scroll 0% 0%; right: 328px; width: 44px; height: 44px; }
+#section-1 .square-5 { background: rgb(74, 193, 121) none repeat scroll 0% 0%; right: 240px; width: 44px; height: 44px; }
+#section-2 .square {  }
+#section-2 .square-1 { background: rgb(51, 187, 154) none repeat scroll 0% 0%; left: 70px; top: 60px; }
+#section-2 .square-2 { background: rgb(41, 162, 184) none repeat scroll 0% 0%; left: -18px; top: 148px; }
+#section-2 .square-3 { background: rgb(96, 207, 110) none repeat scroll 0% 0%; left: 158px; top: 148px; }
+#section-2 .square-4 { background: rgb(138, 231, 90) url("square_c776382.jpg") repeat scroll 0% 0%; left: 70px; top: 236px; width: 176px; height: 176px; }
+#section-2 .square-5 { background: rgb(51, 187, 154) none repeat scroll 0% 0%; left: 246px; top: 236px; }
+.bg-cloud-1 { position: absolute; top: 0px; left: 0px; width: 100%; height: 1000px; background: transparent url("cloud_1_1d4924b.png") repeat scroll 0% 0%; }
+.bg-cloud-2 { position: absolute; top: -200px; left: 0px; width: 100%; height: 400px; background: transparent url("cloud_2_a186193.png") repeat scroll 0% 0%; }
+.bg-cloud-3 { position: absolute; bottom: 0px; left: 0px; width: 100%; height: 400px; background: transparent url("cloud_3_5ee0340.png") repeat scroll 0% 0%; }
+@keyframes cloudmove {
+  0% { background-position: 2000px 0px; }
+  50% { background-position: 0px 0px; }
+  100% { background-position: -2000px 0px; }
+}
+@keyframes cloudmove {
+  0% { background-position: 2000px 0px; }
+  50% { background-position: 0px 0px; }
+  100% { background-position: -2000px 0px; }
+}
+@keyframes cloudmove {
+  0% { background-position: 2000px 0px; }
+  50% { background-position: 0px 0px; }
+  100% { background-position: -2000px 0px; }
+}
+.active .bg-cloud-1 { animation: 100s linear 0s normal none infinite running cloudmove; }
+.active .bg-cloud-2 { animation: 280s linear 0s normal none infinite running cloudmove; }
+.active .bg-cloud-3 { animation: 600s linear 0s normal none infinite running cloudmove; }
+.y-ain { animation: 2s ease 0s normal none infinite running y-ain; transform-style: preserve-3d; }
+@keyframes y-ain {
+  0% { transform: rotateY(0deg); }
+  40% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+@keyframes y-ain {
+  0% { transform: rotateY(0deg); }
+  40% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+@keyframes y-ain {
+  0% { transform: rotateY(0deg); }
+  40% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+.arrowGo { bottom: 42px; animation: 1s steps(10, end) 0s normal none infinite running arrowGo; }
+@keyframes arrowGo {
+  0% { opacity: 1; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 42px; }
+  50% { opacity: 0.5; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 36px; }
+  100% { opacity: 1; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 42px; }
+}
+@keyframes arrowGo {
+  0% { opacity: 1; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 42px; }
+  50% { opacity: 0.5; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 36px; }
+  100% { opacity: 1; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 42px; }
+}
+@keyframes arrowGo {
+  0% { opacity: 1; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 42px; }
+  50% { opacity: 0.5; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 36px; }
+  100% { opacity: 1; transform-origin: center center 0px; transform: translate(-50%, 0px); bottom: 42px; }
+}
+#login { background: rgb(78, 191, 252) none repeat scroll 0% 0%; }
+#login a { color: rgb(255, 255, 255); }
+#login a:hover { color: rgb(255, 255, 255); text-decoration: underline; }
+#login .login-shadow, #login .watermark, #login .login-info h2 { display: none; }
+#login .login { box-shadow: none; width: auto; }
+#login .login form { background: transparent none repeat scroll 0% 0%; padding-top: 26px; }
+#login .login-action { border: 0px none; background: transparent none repeat scroll 0px 0px; padding-top: 0px; }
+#login .login-action .submit { border: 0px none; background: rgb(255, 216, 80) none repeat scroll 0% 0%; color: rgb(92, 76, 18); border-radius: 2px; width: 299px; }
+#login .login-info .account, #login .login-info .password { width: 299px; border: 0px none; }
+#login .login-info .account input, #login .login-info .password input, #login .login-info .account .safe-input, #login .login-info .password .safe-input { width: 252px; }
+#login .login-info .token input { width: 122px; }
+#login #uc-safe-pwd-input { width: 260px; }
+#login .error { color: rgb(221, 69, 69); }
+#login .login-info .token input { border: 0px none; }
+#login .login-info .token img { border: 0px none; opacity: 0.6; }
+#fp-nav { opacity: 0.5; }

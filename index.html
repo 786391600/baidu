@@ -5,6 +5,7 @@
     <title>百度舆情</title>
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/touch.js"></script>
+    <link rel="stylesheet" href="css/xy.css">
 </head>
 <style>
     body{
@@ -13,6 +14,8 @@
         width: 100%;
         height:100%;
         overflow: hidden;
+        font-family: '微软雅黑';
+        position: relative;
     }
     header{
         height: 60px;
@@ -20,6 +23,12 @@
         background: #168BD8;
         position: fixed;
         top:0;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .head-center{
+        margin: 0 auto;
+        height:100%;
     }
     .fullpage{
         width: 100%;
@@ -40,6 +49,180 @@
     }
     .fullpage section:nth-child(4){
         background: pink;
+    }
+    header a{
+        float: left;
+        text-decoration: none;
+    }
+    .logo{
+        background-image: url("img/header_z_94c6de7.png");
+        width: 120px;
+        height:100%;
+        margin-top: 10px;
+
+    }
+    .nav{
+        height:100%;
+        padding-left: 23px;
+        padding-right: 23px;
+        line-height: 80px;
+        font-size: 16px;
+        color:white;
+    }
+    .nav:hover{
+        color:#67CBFF;
+    }
+    .continer .nav:nth-child(2){
+        margin-left: 70px;
+    }
+    .navR{
+        height: 100%;
+        padding-left: 25px;
+        padding-right: 20px;
+        line-height: 90px;
+        font-size: 10px;
+        color:white;
+    }
+    .continer .navR:nth-of-type(5){
+        margin-left:130px;
+        position: relative;
+
+    }
+    .navR span{
+        display:block;
+        width: 35px;
+        height:20px;
+        position: absolute;
+        right:-20px;
+        top:30px;
+        background-image: url('img/header_z_94c6de7.png');
+        background-position:-92px -157px;
+
+    }
+    .continer .navR:nth-of-type(8){
+        color:#FFDA28;
+    }
+    .fullpage section:nth-child(1){
+        background-image: url("img/bg-0_c25cb21.jpg");
+        position: relative;
+        z-index: 1;
+
+    }
+    .section-one-bottom{
+        width: 100%;
+        height:126px;
+        background: #0B67BE;
+        position: absolute;
+        bottom: 0;
+    }
+    .section-one-bottom div{
+        position: absolute;
+    }
+    .section-one-bottom div:nth-child(1){
+        width: 267px;
+        height:175px;
+        left: 0;
+        top: -50px;
+        background-image: url("img/hill_1_0d79217.png");
+    }
+    .section-one-bottom div:nth-child(2){
+        width: 242px;
+        height:228px;
+        left:313px;
+        top: -192px;
+        background-image: url("img/ship_1ad6734.png");
+    }
+    .section-one-bottom div:nth-child(3){
+        width: 63px;
+        height:78px;
+        left:852px;
+        top: -13px;
+        background-image: url("img/hill_2_540422f.png");
+    }
+    .section-one-bottom div:nth-child(4){
+        width: 260px;
+        height:175px;
+        left:1052px;
+        top: -47px;
+        background-image: url("img/hill_3_ace39fb.png");
+    }
+
+    .section-one-bottom div:nth-child(5){
+        width: 500px;
+        height:155px;
+        left:200px;
+        top: -430px;
+        background-image: url("img/launch_deea86c.png");
+    }
+    .fullpage section:nth-child(1) form{
+        display: block;
+        width: 340px;
+        height:300px;
+        background:#4EBFFC;
+        position: absolute;
+        right: 183px;
+        border-radius: 5px;
+        top:120px;
+    }
+    .user{
+        width: 260px;
+        height:40px;
+        background: white;
+        padding-left: 40px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .user input{
+        height:100%;
+        border: 0;
+        outline: none;
+        width: 100%;
+        padding: 0;
+    }
+    .pass{
+        width: 260px;
+        height:40px;
+        background: white;
+        padding-left: 40px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .pass input{
+        height:100%;
+        border: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .yzm{
+        height: 40px;
+        width: 300px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+    .yzm input{
+        padding: 0;
+       height: 100%;
+        border: 0;
+        padding-left:20px;
+        width:120px;
+
+    }
+    .but{
+        height: 40px;
+        width: 300px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+    .but input{
+        width: 300px;
+        height: 35px;
+        background: #FFD850;
+        color:#5C4C12;
+        border: 0;
+        padding: 0;
+        border-radius: 5px;
+        font-size: 20px;
+        box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
     }
 </style>
 <script>
@@ -95,13 +278,38 @@
 </script>
 <body>
   <header>
+      <div class="continer head-center">
+          <a href="#" class="logo"></a>
+          <a href="#" class="nav">首页</a>
+          <a href="#" class="nav">产品</a>
+          <a href="#" class="nav">用户版</a>
+          <a href="#" class="navR">手机客户端<span></span></a>
+          <a href="#" class="navR">百度司南</a>
+          <a href="#" class="navR">联系我们</a>
+          <a href="#" class="navR">申请试用</a>
+      </div>
 
   </header>
 <div class="fullpage">
-    <section>1</section>
+    <section>
+        <form action="index.php" method="get">
+            <div class="user"><input type="text" placeholder="用户名" name="aa"></div>
+            <div class="pass"><input type="text" placeholder="密码"></div>
+            <div class="yzm"><input type="text" placeholder="验证码"></div>
+            <div class="but"><input type="button" value="登陆"></div>
+        </form>
+        <div class="section-one-bottom">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
     <section>2</section>
     <section>3</section>
     <section>4</section>
 </div>
+
 </body>
 </html>

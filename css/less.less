@@ -1,0 +1,33 @@
+
+
+.continer{
+  width: 600px;
+}
+.continer>.row{
+  width: 100%;
+}
+.loop(@i:1) when (@i<=12){
+  .continer>.row>.col-x-@{i}{
+    width: @i/12*100%;
+  }
+
+  .loop(@i+1);
+}
+.loop;
+
+@media screen and (min-width:1000px) {
+       .continer{
+         width: 1000px;
+       }
+       .continer>.row{
+         width: 100%;
+       }
+      .loop(@i:1)when(@i<=12){
+        .continer>.row>.col-d-@{i}{
+            width: @i/12*100%;
+          }
+
+        .loop(@i+1);
+      }
+  .loop
+}
