@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度舆情</title>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/touch.js"></script>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height:100%;
+        overflow: hidden;
+    }
+    header{
+        height: 60px;
+        width: 100%;
+        background: #168BD8;
+        position: fixed;
+        top:0;
+    }
+    .fullpage{
+        width: 100%;
+        transition:margin-top 0.8s;
+    }
+    section{
+        width: 100%;
+        height:100%;
+    }
+    .fullpage section:nth-child(1){
+        background: blue;
+    }
+    .fullpage section:nth-child(2){
+        background: yellow;
+    }
+    .fullpage section:nth-child(3){
+        background: red;
+    }
+    .fullpage section:nth-child(4){
+        background: pink;
+    }
+</style>
+<script>
+    $(function(){
+     var cH=$(window).height();
+         $('.fullpage').css('height',cH);
+
+        var num=0;
+        var felg=true;
+        $('section').mousedown(function(e){
+            e.preventDefault();
+        })
+        $('section').mousemove(function(e){
+            e.preventDefault();
+        })
+        touch.on('.fullpage','swipeup','section',function(){
+
+            if(!felg){
+                return;
+            }
+            num++;
+            if(num>=$('section').length){
+                num=$('section').length-1;
+                return;
+            }
+
+            felg=false;
+
+            if(num>=$('section').length){
+                num=$('section').length-1;
+            }
+          $('.fullpage').css('margin-top',num*(-cH));
+        })
+        touch.on('.fullpage','swipedown','section',function(){
+            if(!felg){
+                return;
+            }
+            num--;
+            if(num<0){
+                num=0;
+                return;
+            }
+
+            felg=false;
+
+
+            $('.fullpage').css('margin-top',num*(-cH));
+        })
+        $('.fullpage')[0].addEventListener('webkitTransitionEnd',function(){
+            felg=true;
+        })
+    })
+</script>
+<body>
+  <header>
+
+  </header>
+<div class="fullpage">
+    <section>1</section>
+    <section>2</section>
+    <section>3</section>
+    <section>4</section>
+</div>
+</body>
+</html>

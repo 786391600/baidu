@@ -1,0 +1,69 @@
+body,html{
+    width:100%;
+    height:100%;
+    margin:0;padding: 0;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height:60px;
+    background: #168bd8;
+    position: fixed;
+    left:0;top:0;
+}
+#fullpage{
+    width:100%;
+    height:100%;
+    transition: margin-top 1s;
+}
+section{
+    width:100%;
+    height:100%;
+}
+section:nth-child(1){
+    background: url("../../img/10.jpg");
+    background-size: cover;
+}
+section:nth-child(2){
+    background: url("../../img/11.jpg");
+    background-size: cover;
+}
+section:nth-child(3){
+    background: url("../../img/12.jpg");
+    background-size: cover;
+}
+section:nth-child(4){
+    background: url("../../img/1.jpg");
+    background-size: cover;
+}
+/*头部*/
+.header{
+    height:60px;
+    display:flex;
+    align-content: space-between;
+    flex-wrap: nowrap;
+}
+.header a{
+    color: #fff;
+    font-family: "Microsoft Yahei";
+    text-decoration: none;
+}
+.logo{
+    width:120px;
+    height:40px;
+    margin-top: 10px;
+    background: url("../img/header_z_94c6de7.png") no-repeat 0 0;
+}
+.header .index{
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.header .last{
+    align-self: flex-end;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.header a:nth-of-type(5){
+    margin-left: 100px;
+}
