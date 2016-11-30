@@ -6,407 +6,16 @@
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/touch.js"></script>
     <link rel="stylesheet" href="css/xy.css">
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
-<style>
-    body{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height:100%;
-        overflow: hidden;
-        font-family: '微软雅黑';
-        position: relative;
-    }
-    header{
-        height: 60px;
-        width: 100%;
-        background: #168BD8;
-        position: fixed;
-        top:0;
-        /*overflow: hidden;*/
-        z-index: 10;
-    }
-    .head-center{
-        margin: 0 auto;
-        height:100%;
-
-    }
-    .fullpage{
-        width: 100%;
-        transition:margin-top 0.8s;
-    }
-    section{
-        width: 100%;
-        height:100%;
-    }
-
-    .fullpage section:nth-child(2){
-        background: yellow;
-    }
-    .fullpage section:nth-child(3){
-        background: red;
-    }
-    .fullpage section:nth-child(4){
-        background: pink;
-    }
-    header a{
-        float: left;
-        text-decoration: none;
-    }
-    .logo{
-        background-image: url("img/header_z_94c6de7.png");
-        width: 120px;
-        height:80%;
-        margin-top: 10px;
-        background-position: 0 0px;
-
-    }
-    .nav{
-        height:100%;
-        padding-left: 23px;
-        padding-right: 23px;
-        line-height: 80px;
-        font-size: 16px;
-        color:white;
-    }
-    .nav:hover{
-        color:#67CBFF;
-    }
-    .continer .nav:nth-child(2){
-        margin-left: 70px;
-    }
-    .navR{
-        height: 100%;
-        padding-left: 25px;
-        padding-right: 20px;
-        line-height: 90px;
-        font-size: 10px;
-        color:white;
-    }
-    .continer .navR:nth-of-type(5){
-        margin-left:130px;
-        position: relative;
-
-    }
-    .navR span{
-        display:block;
-        width: 35px;
-        height:20px;
-        position: absolute;
-        right:-20px;
-        top:30px;
-        background-image: url('img/header_z_94c6de7.png');
-        background-position:-92px -157px;
-
-    }
-    .continer .navR:nth-of-type(5):hover .ewm{
-        display: block;
-    }
-    .ewm{
-        width: 366px;
-        height: 246px;
-        position: absolute;
-        top: 70px;
-        left: -120px;
-        border-radius: 5px 5px 0 0 ;
-        display: none;
-    }
-    .ewm:before{
-        content: '';
-        display: block;
-        width: 0;
-        height: 0;
-        border-bottom: 10px solid white;
-        border-left: 10px solid transparent;
-        border-right:10px solid transparent;
-        position: absolute;
-        top: -10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
-    .ewm-top{
-        width: 100%;
-        height: 45px;
-        background: #F1F1F1;
-        border-radius: 5px 5px 0 0;
-        text-align: center;
-        font-size: 18px;
-        line-height: 45px;
-        color: #333333;
-    }
-    .ewm-con{
-        width: 100%;
-        height: 201px;
-        background: white;
-    }
-    .ewm-con div{
-        width: 115px;
-        height: 115px;
-        float: left;
-        background: red;
-        margin: 0 20px 0;
-        position: relative;
-        margin-top: 20px;
-    }
-    .ewm-con div:nth-child(1){
-        background-image: url(img/header_z_94c6de7.png);
-        background-position: -120px -182px;
-        margin-left: 45px;
-    }
-    .ewm-con div:nth-child(2){
-        background-image: url(img/header_z_94c6de7.png);
-        background-position: -120px -182px;
-
-    }
-    .ewm-con button{
-        display: block;
-        width: 60px;
-        height:25px;
-        background: #F5F5F5;
-        position: absolute;
-        bottom: -40px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        border-radius: 15px;
-        border: 0;
-        color: black;
-        font-size: 14px;
-        outline: none;
-    }
-
-    .continer .navR:nth-of-type(8){
-        color:#FFDA28;
-    }
-    .fullpage section:nth-child(1){
-        background-image: url("img/bg-0_c25cb21.jpg");
-        position: relative;
-        z-index: 1;
-
-    }
-    .cloud{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image:url('img/cloud_1_1d4924b.png');
-        background-position: 0 0;
-        z-index: 0;
-        -webkit-animation: cloudmove 30s linear infinite;
-    }
-    .cloud1{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image:url('img/cloud_2_a186193.png');
-        background-position:0 -50px;
-        z-index: 0;
-        -webkit-animation: cloudmove 40s linear infinite;
-    }
-    .cloud2{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image:url('img/cloud_3_5ee0340.png');
-        background-position:0 -300px;
-        z-index: 0;
-        -webkit-animation: cloudmove 35s linear infinite;
-    }
-
-    @-webkit-keyframes cloudmove {
-        0%{
-            left: 1366px;
-        }
-
-        100%{
-            left: -1366px;
-        }
-
-    }
-    .section-one-bottom{
-        width: 100%;
-        height:126px;
-        background: #0B67BE;
-        position: absolute;
-        bottom: 0;
-    }
-    .section-one-bottom div{
-        position: absolute;
-    }
-    .section-one-bottom div:nth-child(1){
-        width: 267px;
-        height:175px;
-        left: 0;
-        top: -50px;
-        background-image: url("img/hill_1_0d79217.png");
-        
-    }
-    .section-one-bottom div:nth-child(2){
-        width: 242px;
-        height:228px;
-        left:313px;
-        top: -192px;
-        background-image: url("img/ship_1ad6734.png");
-    }
-    .section-one-bottom div:nth-child(3){
-        width: 63px;
-        height:78px;
-        left:852px;
-        top: -13px;
-        background-image: url("img/hill_2_540422f.png");
-    }
-    .section-one-bottom div:nth-child(4){
-        width: 260px;
-        height:175px;
-        left:1052px;
-        top: -47px;
-        background-image: url("img/hill_3_ace39fb.png");
-    }
-
-    .section-one-bottom div:nth-child(5){
-        width: 500px;
-        height:155px;
-        left:200px;
-        top: -430px;
-        background-image: url("img/launch_deea86c.png");
-    }
-    .fullpage section:nth-child(1) form{
-        display: block;
-        width: 340px;
-        height:300px;
-        background:#4EBFFC;
-        position: absolute;
-        right: 183px;
-        border-radius: 5px;
-        top:120px;
-        z-index: 10;
-    }
-    .user{
-        width: 260px;
-        height:40px;
-        background: white;
-        padding-left: 40px;
-        margin-top: 30px;
-        margin-left: 20px;
-    }
-    .user input{
-        height:100%;
-        border: 0;
-        outline: none;
-        width: 100%;
-        padding: 0;
-    }
-    .pass{
-        width: 260px;
-        height:40px;
-        background: white;
-        padding-left: 40px;
-        margin-top: 30px;
-        margin-left: 20px;
-    }
-    .pass input{
-        height:100%;
-        border: 0;
-        width: 100%;
-        padding: 0;
-    }
-    .yzm{
-        height: 40px;
-        width: 300px;
-        margin-left: 20px;
-        margin-top: 30px;
-    }
-    .yzm input{
-        padding: 0;
-       height: 100%;
-        border: 0;
-        padding-left:20px;
-        width:120px;
-
-    }
-    .but{
-        height: 40px;
-        width: 300px;
-        margin-left: 20px;
-        margin-top: 30px;
-    }
-    .but input{
-        width: 300px;
-        height: 35px;
-        background: #FFD850;
-        color:#5C4C12;
-        border: 0;
-        padding: 0;
-        border-radius: 5px;
-        font-size: 20px;
-        box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
-    }
-    .mobie-hd{
-        display: none;
-    }
-    @media screen and (max-width: 1000px){
-      .mobie-hd{
-          display: block;
-          width: 100%;
-          height: 100%;
-          perspective: 800px;
-          transform-style: preserve-3d;
-      }
-      .head-center{
-          display: none;
-      }
-      .hd-line{
-          width: 60px;
-          height:60px;
-          float: right;
-      }
-      .hd-line span{
-          display: block;
-          width: 40px;
-          height:4px;
-          background: white;
-          margin: 17px auto;
-      }
-      .mobie-nav{
-          float: left;
-          width: 100%;
-          height: 40px;
-          background: #35A0E6;
-          border-bottom: 1px solid white;
-          text-align: center;
-          text-decoration: none;
-          color: white;
-          line-height: 40px;
-          transform: rotatex(90deg);
-          opacity: 0;
-      }
-      @-webkit-keyframes mobienav{
-          0%{
-              transform:rotateX(90deg);
-              opacity: 0;
-          }
-          100%{
-              transform:rotateX(0deg);
-              opacity: 1;
-          }
-      }
-        @-webkit-keyframes mobienav1{
-            0%{
-                transform:rotateX(0deg);
-                opacity: 1;
-            }
-            100%{
-                transform:rotateX(90deg);
-                opacity: 0;
-            }
-        }
-    }
-</style>
 <script>
     $(function(){
      var cH=$(window).height();
-         $('.fullpage').css('height',cH);
-
+     var cW=$(window).width();
+         $('.fullpage').css({'height':cH,'width':cW});
+         $('section').css({'height':cH,'width':cW});
+         $('body').css({'height':cH,'width':cW})
         var num=0;
         var felg=true;
         $('section').mousedown(function(e){
@@ -421,18 +30,21 @@
                 return;
             }
             num++;
+
             if(num>=$('section').length){
                 num=$('section').length-1;
                 return;
             }
-
+            lrblock(num);
             felg=false;
-
+            $('.cdh li').css('background','rgba(0,0,0,0)').eq(num).css('background','rgba(0,0,0,0.5)');
             if(num>=$('section').length){
                 num=$('section').length-1;
             }
           $('.fullpage').css('margin-top',num*(-cH));
         })
+
+
         touch.on('.fullpage','swipedown','section',function(){
             if(!felg){
                 return;
@@ -442,10 +54,10 @@
                 num=0;
                 return;
             }
-
+            lrblock(num);
             felg=false;
 
-
+            $('.cdh li').css('background','rgba(0,0,0,0)').eq(num).css('background','rgba(0,0,0,0.5)');
             $('.fullpage').css('margin-top',num*(-cH));
         })
         $('.fullpage')[0].addEventListener('webkitTransitionEnd',function(){
@@ -457,29 +69,64 @@
             if(linef){
                 $('.hd-line span').eq(0).css({'transform':'rotate(45deg) translate(0,15px)','transition':'transform 0.5s'});
                 $('.hd-line span').eq(1).css({'transform':'rotate(-45deg) translate(0,-15px)','transition':'transform 0.5s'})
-                $('.mobie-nav').css('opacity','0');
+                $('.mobie-nav').css({'opacity':'0','display':'block'});
+
                 $('.mobie-nav').each(function(index,obj){
-                    $(obj).css({'animation':'mobienav 0.2s ease '+index*0.2+'s forwards'});
+                     $(obj).css({'animation':'mobienav 0.2s ease '+index*0.2+'s forwards'},function(){alert('ddd')});
+//                    $(obj).css({'transform':'rotateX(0deg)','opacity':1,transition:'opacity transform 2s 2s '+index*0.2+'s '+index*0.2+'s'});
+
                 })
                 linef=false;
             }else{
                 $('.hd-line span').eq(0).css({'transform':'rotate(0deg) translate(0,0px)','transition':'transform 0.5s'});
-                $('.hd-line span').eq(1).css({'transform':'rotate(0deg) translate(0,-0px)','transition':'transform 0.5s'})
+                $('.hd-line span').eq(1).css({'transform':'rotate(0deg) translate(0,-0px)','transition':'transform 0.5s'});
                 $('.mobie-nav').css({'opacity':'1','transform':'rotate(0deg)'});
                 $('.mobie-nav').each(function(index,obj){
-                    console.log(1.2-index*0.2)
                     $(obj).css({'animation':'mobienav1 0.2s ease '+(1-index*0.1)+'s forwards'});
+
                 })
+                setTimeout(function(){
+                    $('.mobie-nav').css('display','none')
+                },1200)
                 linef=true;
             }
 
         })
+
+
+        /*放大缩小屏幕*/
         $(window).resize(function(){
-            $('.mobie-nav').css('animation','none');
+            cH=$(window).height();
+            cW=$(window).width();
+            $('.fullpage').css({'height':cH,'width':cW});
+            $('section').css({'height':cH,'width':cW});
+            $('body').css({'height':cH,'width':cW});
+            if(cW>1000){
+                $('.hd-line span').eq(0).css({'transform':'rotate(0deg) translate(0,0px)'});
+                $('.hd-line span').eq(1).css({'transform':'rotate(0deg) translate(0,-0px)'});
+                $('.mobie-nav').css({'transform':'rotate(0deg)','animation':'none'});
+            }
+            linef=true;
+            $('.fullpage').css('margin-top',num*(-cH));
+            console.log(num);
         })
 
 
     })
+    function lrblock(num){
+        if(num==0){
+            $('.section-one-bottom div:nth-child(2)').css({'transform':'translate(0,0)','opacity':'0','animation':'none'});
+            $('.section-one-bottom div:nth-child(2)').css('animation','lmove 2s ease forwards');
+            $('.set-box1').css({'transform':'translate(0px,0px)','opacity':'0','animation':'none'});
+            $('.set-box2').css({'transform':'translate(0,0)','opacity':'0','animation':'none'});
+        }else{
+            $('.set-box1').css({'transform':'translate(0px,0px)','opacity':'0','animation':'none'});
+            $('.set-box1').eq(num-1).css('animation','lmove 2s ease forwards');
+            $('.set-box2').css({'transform':'translate(0,0)','opacity':'0','animation':'none'});
+            $('.set-box2').eq(num-1).css('animation','rmove 2s ease forwards');
+            $('.section-one-bottom div:nth-child(2)').css({'transform':'translate(0px,0px)','opacity':'0','animation':'none'})
+        }
+    }
 </script>
 <body>
   <header>
@@ -511,21 +158,21 @@
               <span></span>
               <span></span>
           </div>
-          <a href="#" class="mobie-nav">aaaaaa</a>
-          <a href="#" class="mobie-nav">aaaaaa</a>
-          <a href="#" class="mobie-nav">aaaaaa</a>
-          <a href="#" class="mobie-nav">aaaaaa</a>
-          <a href="#" class="mobie-nav">aaaaaa</a>
-          <a href="#" class="mobie-nav">aaaaaa</a>
-          <a href="#" class="mobie-nav">aaaaaa</a>
+          <a href="#" class="mobie-nav">首页</a>
+          <a href="#" class="mobie-nav">产品</a>
+          <a href="#" class="mobie-nav">用户版</a>
+          <a href="#" class="mobie-nav">手机客户端</a>
+          <a href="#" class="mobie-nav">百度司南</a>
+          <a href="#" class="mobie-nav">联系我们</a>
+          <a href="#" class="mobie-nav">申请试用</a>
       </div>
   </header>
 <div class="fullpage">
     <section>
         <form action="index.php" method="get">
-            <div class="user"><input type="input" placeholder="用户名" name="aa"></div>
-            <div class="pass"><input type="input" placeholder="密码"></div>
-            <div class="yzm"><input type="input" placeholder="验证码"></div>
+            <div class="user"><input type="text" tabindex='1' autocomplete="off" placeholder="用户名" name="aa"></div>
+            <div class="pass"><input type="text" tabindex='1' autocomplete="off" placeholder="密码"></div>
+            <div class="yzm"><input type="text" tabindex='1' autocomplete="off" placeholder="验证码"></div>
             <div class="but"><input type="button" value="登陆"></div>
         </form>
         <div class="section-one-bottom">
@@ -534,21 +181,62 @@
             <div></div>
             <div></div>
             <div></div>
+            <div></div>
         </div>
-        <div class="cloud clo" data="0.5">
+        <div class="cloud clo">
 
         </div>
-        <div class="cloud1 clo" data="0.1">
+        <div class="cloud1 clo">
 
         </div>
-        <div class="cloud2 clo" data="0.3">
+        <div class="cloud2 clo">
 
         </div>
     </section>
-    <section>2</section>
-    <section>3</section>
-    <section>4</section>
+    <section>
+        <div class="set-box1">
+            <img src="img/h_lingxian_221f2d8.png">
+            <div class="set-font">
+                <h1>数据收集与处理</h1>
+                <span>15年专业数据收集与语义分析技术积累卓越极致，不断攀登</span>
+            </div>
+        </div>
+        <div class="set-box2">
+            <img src="img/brain_36a156f.png" alt="">
+        </div>
+    </section>
+    <section>
+        <div class="set-box1">
+            <img src="img/h_quanmian_8f813d2.png">
+            <div class="set-font">
+                <h1>舆情分析逻辑与架构</h1>
+                <span>声量诊断、传播分析、情感提炼、受众画像有方法论，更有智慧</span>
+            </div>
+        </div>
+        <div class="set-box2">
+            <img src="img/allside_e8abd12.png" alt="">
+        </div>
+    </section>
+    <section>
+        <div class="set-box1">
+            <img src="img/h_zhuanye_256a94d.png">
+            <div class="set-font">
+                <h1>舆情分析逻辑与架构</h1>
+                <span>声量诊断、传播分析、情感提炼、受众画像有方法论，更有智慧</span>
+            </div>
+        </div>
+        <div class="set-box2">
+            <img src="img/stat_8934528.png" alt="">
+        </div>
+    </section>
 </div>
-
+<div class="cdh">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
 </body>
 </html>

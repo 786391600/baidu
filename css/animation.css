@@ -1,0 +1,86 @@
+
+/*小屏幕导航动画*/
+@-webkit-keyframes mobienav{
+    0%{
+        transform:rotateX(90deg);
+        opacity: 0;
+    }
+    100%{
+        transform:rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes mobienav1{
+    0%{
+        transform:rotateX(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform:rotateX(90deg);
+        opacity: 0;
+
+    }
+}
+/*飞机动画*/
+@-webkit-keyframes mymove {
+    0%{
+        transform: translate(0px,-30px);
+        display: block;
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+/*文字旋转*/
+@-webkit-keyframes fontmove {
+     0%{
+         transform: rotateY(0deg);
+     }
+
+     50%{
+         transform: rotateY(360deg);
+     }
+     70%{
+        transform: rotateY(360deg);
+    }
+
+    100%{
+        transform: rotateY(0deg);
+    }
+ }
+/*左右块移动*/
+@-webkit-keyframes lmove {
+    0%{
+        transform: translate(0px,0px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(50px,0px);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes rmove {
+    0%{
+        transform: translate(0px,0px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(-50px,0px);
+        opacity: 1;
+    }
+}
+
+
+/*云动画*/
+@-webkit-keyframes cloudmove {
+    0%{
+        left: 1366px;
+    }
+
+    100%{
+        left: -1366px;
+    }
+
+}
