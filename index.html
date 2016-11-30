@@ -23,7 +23,7 @@
         background: #168BD8;
         position: fixed;
         top:0;
-        overflow: hidden;
+        /*overflow: hidden;*/
         z-index: 10;
     }
     .head-center{
@@ -38,9 +38,7 @@
         width: 100%;
         height:100%;
     }
-    .fullpage section:nth-child(1){
-        background: blue;
-    }
+
     .fullpage section:nth-child(2){
         background: yellow;
     }
@@ -57,8 +55,9 @@
     .logo{
         background-image: url("img/header_z_94c6de7.png");
         width: 120px;
-        height:100%;
+        height:80%;
         margin-top: 10px;
+        background-position: 0 0px;
 
     }
     .nav{
@@ -99,6 +98,83 @@
         background-position:-92px -157px;
 
     }
+    .continer .navR:nth-of-type(5):hover .ewm{
+        display: block;
+    }
+    .ewm{
+        width: 366px;
+        height: 246px;
+        position: absolute;
+        top: 70px;
+        left: -120px;
+        border-radius: 5px 5px 0 0 ;
+        display: none;
+    }
+    .ewm:before{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid white;
+        border-left: 10px solid transparent;
+        border-right:10px solid transparent;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .ewm-top{
+        width: 100%;
+        height: 45px;
+        background: #F1F1F1;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        font-size: 18px;
+        line-height: 45px;
+        color: #333333;
+    }
+    .ewm-con{
+        width: 100%;
+        height: 201px;
+        background: white;
+    }
+    .ewm-con div{
+        width: 115px;
+        height: 115px;
+        float: left;
+        background: red;
+        margin: 0 20px 0;
+        position: relative;
+        margin-top: 20px;
+    }
+    .ewm-con div:nth-child(1){
+        background-image: url(img/header_z_94c6de7.png);
+        background-position: -120px -182px;
+        margin-left: 45px;
+    }
+    .ewm-con div:nth-child(2){
+        background-image: url(img/header_z_94c6de7.png);
+        background-position: -120px -182px;
+
+    }
+    .ewm-con button{
+        display: block;
+        width: 60px;
+        height:25px;
+        background: #F5F5F5;
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-radius: 15px;
+        border: 0;
+        color: black;
+        font-size: 14px;
+        outline: none;
+    }
+
     .continer .navR:nth-of-type(8){
         color:#FFDA28;
     }
@@ -106,6 +182,41 @@
         background-image: url("img/bg-0_c25cb21.jpg");
         position: relative;
         z-index: 1;
+
+    }
+    .cloud{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image:url('img/cloud_1_1d4924b.png');
+        background-position: 0 0;
+        z-index: 0;
+        animation: cloudmove;
+    }
+    .cloud1{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image:url('img/cloud_2_a186193.png');
+        background-position:0 -50px;
+        z-index: 0;
+    }
+    .cloud2{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image:url('img/cloud_3_5ee0340.png');
+        background-position:0 -300px;
+        z-index: 0;
+    }
+    @keyframes cloudmove {
+        0%{
+            left: -1366px;
+        }
+
+        100%{
+            left: 0px;
+        }
 
     }
     .section-one-bottom{
@@ -124,6 +235,7 @@
         left: 0;
         top: -50px;
         background-image: url("img/hill_1_0d79217.png");
+        
     }
     .section-one-bottom div:nth-child(2){
         width: 242px;
@@ -163,6 +275,7 @@
         right: 183px;
         border-radius: 5px;
         top:120px;
+        z-index: 10;
     }
     .user{
         width: 260px;
@@ -274,6 +387,9 @@
         $('.fullpage')[0].addEventListener('webkitTransitionEnd',function(){
             felg=true;
         })
+        /*云朵漂浮*/
+
+
     })
 </script>
 <body>
@@ -283,7 +399,17 @@
           <a href="#" class="nav">首页</a>
           <a href="#" class="nav">产品</a>
           <a href="#" class="nav">用户版</a>
-          <a href="#" class="navR">手机客户端<span></span></a>
+          <a href="#" class="navR">手机客户端<span></span>
+              <div class="ewm">
+                 <div class="ewm-top">
+                    扫码下载
+                 </div>
+                  <div class="ewm-con">
+                      <div><button>安卓</button></div>
+                      <div><button>IOS</button></div>
+                  </div>
+              </div>
+          </a>
           <a href="#" class="navR">百度司南</a>
           <a href="#" class="navR">联系我们</a>
           <a href="#" class="navR">申请试用</a>
@@ -304,6 +430,15 @@
             <div></div>
             <div></div>
             <div></div>
+        </div>
+        <div class="cloud clo" data="0.5">
+
+        </div>
+        <div class="cloud1 clo" data="0.1">
+
+        </div>
+        <div class="cloud2 clo" data="0.3">
+
         </div>
     </section>
     <section>2</section>
